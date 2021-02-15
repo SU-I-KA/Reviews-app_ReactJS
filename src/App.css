@@ -1,38 +1,180 @@
-.App {
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  color: #102a42;
+  background-color: #f1f5f8;
+}
+
+.container {
+  padding: 30px 20px;
+  /* padding-bottom: 50px; */
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.title {
+  flex: 0 0 100%;
+  max-width: 100%;
+  /* margin-top: 30px; */
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.title h1 {
+  font-size: 42px;
+  font-weight: 700;
+  text-transform: capitalize;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.title h1::before {
+  content: '';
+  position:absolute;
+  height: 3px;
+  right: 42%;
+  background-color: #49a6e9;
+  top: 88px;
+  left: 42%;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+.justify-center {
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+}
+
+.review-wrap {
+  flex: 0 0 100%;
+  max-width: 650px;
+  min-height: 420px;
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 65px;
+  border-radius: 4px;
+  box-shadow: 0 5px 15px rgb(0 0 0 / 10%);
+  background-color: white;
+  transition: all 0.3s ease;
+  justify-content: center;
+  padding: 20px 25px;
+}
+
+.review-wrap:hover {
+  box-shadow: 0 5px 15px rgb(0 0 0 / 20%);
+}
+
+.img-wrap {
+  flex: 0 0 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.image {
+  max-width: 150px;
+  max-height: 150px;
+  overflow: hidden;
+  border-radius: 50%;
+  box-shadow: 8px -3px #49a6e9;
+}
+
+.right-quote {
+  background-color: #49a6e9;
   color: white;
+  font-size: 18px;
+  position: absolute;
+  /* padding: 5px; */
+  border-radius: 50%;
+  width: 45px;
+  height: 45px;
+  text-align: center;
+  padding-top: 14px;
+  margin-top: 15px;
+  margin-left: -158px;
 }
 
-.App-link {
-  color: #61dafb;
+button {
+  cursor: pointer;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
+.image img {
+  width: 100%;
+  object-fit: cover;
+}
+
+.name-job {
+  padding-top: 20px;
+  text-align: center;
+}
+
+.name-job h3 {
+  font-size: 18px;
+  letter-spacing: 1px;
+}
+
+.name-job p {
+  color: #49a6e9;
+  font-size: 14px;
+  text-transform: uppercase;
+}
+
+.info {
+  padding: 15px 10px;
+  text-align: center;
+  min-height: 100px;
+}
+
+.info p {
+  color: #617d98;
+}
+
+.btn-wrap {
+  display: flex;
+  flex: 0 0 100%;
+  justify-content: center;
+  padding-bottom: 10px;
+}
+
+.prev-btn, .nex-btn {
+  border: transparent;
+  background: transparent;
+  font-size: 22px;
+  color: #8bcbf9;
+  padding: 0px 15px;
+  transition: all 0.4s ease;
+}
+
+.prev-btn:hover, .nex-btn:hover {
+  color: #49a6e9;
+}
+
+.surp-btn {
+  border: transparent;
+  background-color: #ebf7ff;
+  color: #49a6e9;
+  font-size: 14px;
+  padding: 3px 8px;
+  border-radius: 5px;
+  line-height: 23px;
+  transition: all 0.4s ease;
+}
+
+.surp-btn:hover {
+  background-color: #49a6e9;
+  color: #fff;
+}
+
+@media(max-width:540px){
+  .title h1::before {
+    right: 35%;
+    left: 35%;
+}
+}
+
+@media(max-width:425px){
+  .title h1 {
+    font-size: 35px;
   }
 }
