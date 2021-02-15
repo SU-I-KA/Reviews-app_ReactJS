@@ -15,7 +15,7 @@ The page will reload if you make edits.\
 You will also see any lint errors in the console.
 
 ### `PREVIEW`
-![alt text](https://github.com/su-i-ka/Reviws-app_ReactJS/blob/master/preview.png?raw=true)
+![alt text](https://github.com/su-i-ka/Reviews-app_ReactJS/blob/master/preview.png?raw=true)
 
 ### `npm test`
 
